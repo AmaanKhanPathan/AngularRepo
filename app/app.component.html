@@ -1,0 +1,113 @@
+<h4 class="bg-primary text-white col-md-12 p-4">Data Without using Pipe</h4>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered  ">
+        <thead>
+          <tr class="bg-info">
+            <th>Sr. No</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Marks</th>
+            <th>Percentage</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Package</th>
+          </tr> 
+        </thead>
+        <tbody> 
+          <tr *ngFor="let emp of employees; index as i">
+            <td>{{i + 1}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.course}}</td>
+            <td>{{emp.marks}}</td>
+            <td>{{emp.marks / totalMarks*100}}</td>
+            <td>{{emp.DOB}}</td>
+            <td>{{emp.gender}}</td>
+            <td>{{emp.package}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<br><hr><br>
+
+<h4 class="bg-primary text-white p-4">Data with using Pipes</h4>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered  ">
+        <thead>
+          <tr class="bg-info">
+            <th>Sr. No</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Marks</th>
+            <th>Percentage</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Package</th>
+          </tr> 
+        </thead>
+        <tbody> 
+          <tr *ngFor="let emp of employees; index as i">
+            <td>{{i + 1}}</td>
+            <td>{{emp.name | titlecase}}</td>
+            <td>{{emp.course}}</td>
+            <td>{{emp.marks}}</td>
+            <td>{{emp.marks / totalMarks  | percent : '1.2-2'}}</td>
+            <td>{{emp.DOB | date : 'fullDate'}}</td>
+            <td>{{emp.gender | uppercase}}</td>
+            <td>{{emp.package | currency : 'INR'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<br><hr><hr>
+
+<h4 class="bg-primary text-white p-4">Data with using Pipes</h4>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered  ">
+        <thead>
+          <tr class="bg-info">
+            <th>Sr. No</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Marks</th>
+            <th>Percentage</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Package</th>
+          </tr> 
+        </thead>
+        <tbody> 
+          <tr *ngFor="let emp of employees; index as i">
+            <td>{{i + 1}}</td>
+            <td>{{emp.name }}</td>
+            <td>{{emp.course}}</td>
+            <td>{{emp.marks}}</td>
+            <td>{{emp.marks / totalMarks}}</td>
+            <td>{{emp.DOB}}</td>
+            <td>{{emp.gender}}</td>
+            <td>{{emp.package}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
